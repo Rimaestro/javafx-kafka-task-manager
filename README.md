@@ -1,4 +1,4 @@
-# Aplikasi Desktop Kafka Task Manager
+# JavaFX Kafka Task Manager
 
 ![Java](https://img.shields.io/badge/Java-11-orange)
 ![JavaFX](https://img.shields.io/badge/JavaFX-17.0.2-blue)
@@ -64,18 +64,15 @@ Aplikasi ini memiliki tampilan modern dengan:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/Rimaestro/kafka-task-manager.git
-cd kafka-task-manager
+git clone https://github.com/Rimaestro/javafx-kafka-task-manager.git
+cd javafx-kafka-task-manager
 ```
 
 ### 2. Menjalankan Kafka dan MySQL dengan Docker
 
 ```bash
-# Masuk ke direktori docker
-cd docker
-
 # Jalankan Kafka, Zookeeper, dan MySQL
-docker-compose up -d
+docker compose -f docker/docker-compose.yml up -d
 
 # Verifikasi container berjalan
 docker ps
@@ -84,10 +81,7 @@ docker ps
 ### 3. Build Aplikasi dengan Maven
 
 ```bash
-# Kembali ke root direktori
-cd ..
-
-# Build aplikasi
+# Dari root direktori repository, build aplikasi
 mvn clean package
 ```
 
@@ -188,8 +182,8 @@ db.password=password
 
 2. Reset data (jika diperlukan):
 ```bash
-docker-compose down -v
-docker-compose up -d
+docker compose -f docker/docker-compose.yml down
+docker compose -f docker/docker-compose.yml up -d
 ```
 
 ## 🤝 Kontribusi
@@ -210,4 +204,4 @@ Didistribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanj
 
 Rimaestro - [GitHub](https://github.com/Rimaestro) - aku.mayesta@gmail.com
 
-Project Link: [https://github.com/Rimaestro/kafka-task-manager](https://github.com/Rimaestro/kafka-task-manager) 
+Project Link: [https://github.com/Rimaestro/javafx-kafka-task-manager](https://github.com/Rimaestro/javafx-kafka-task-manager) 
